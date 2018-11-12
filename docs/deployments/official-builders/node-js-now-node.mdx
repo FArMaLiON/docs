@@ -42,7 +42,7 @@ The `index.js` file exports a Node.js function that takes in the standard Node.j
 
 ```
 const { parse } = require("url");
-const cowsay = require("cowsay").say;
+const cowsay = require("cowsay/build/cowsay.umd.js").say;
 module.exports = (req, res) => {
   const { query } = parse(req.url, true);
   const { text = "Use query `text`" } = query;
@@ -61,7 +61,7 @@ The only step left is to define a build that will take this directory's entrypoi
 }
 ```
 
-Our resulting deployment is here: [https://myproject-k7hyuqhk9.now.sh](https://myproject-k7hyuqhk9.now.sh).
+Our resulting deployment is here: https://myproject-okyyx65ht.now.sh.
 
 You can pass query parameters to make the cow change:
 
